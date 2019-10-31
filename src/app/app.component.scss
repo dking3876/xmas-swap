@@ -1,0 +1,20 @@
+.items{
+    display:grid;
+    grid-template-areas: 
+    "item1 item2 item3"
+    "item4 space item5"
+    "item6 item7 item8";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align:center;
+    .item, .spacer{
+        min-height: 33vh;
+        border:1px solid black;
+    }
+    .spacer{
+        grid-area:space;
+    }
+    .item.active{
+        background-color:lightcoral;
+    }
+}
